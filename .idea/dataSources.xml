@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="MySQL - calc@localhost" uuid="a5368733-0aac-4aaf-92ba-b7ae4e497b39">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>org.gjt.mm.mysql.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/calc</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
@@ -15,10 +15,21 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="Database Driver -" uuid="350adb71-3b01-4726-a1c9-971fcef255b1">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="7ffadd17-8579-47c9-8615-4317d7de169b">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.gjt.mm.mysql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/calc</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
     </data-source>
   </component>
 </project>

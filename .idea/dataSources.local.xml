@@ -11,10 +11,14 @@
       <user-name>root</user-name>
       <introspection-schemas>*:calc</introspection-schemas>
     </data-source>
-    <data-source name="Database Driver -" uuid="350adb71-3b01-4726-a1c9-971fcef255b1">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="7ffadd17-8579-47c9-8615-4317d7de169b">
+      <database-info product="MySQL" version="5.5.5-10.1.32-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:calc</introspection-schemas>
     </data-source>
   </component>
 </project>

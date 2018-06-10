@@ -5,12 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.url">jdbc:mysql://localhost:3306/calc</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping class="calcData.UsersEntity"/>
-        <!-- <property name="connection.username"/> -->
-        <!-- <property name="connection.password"/> -->
-
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping resource="calcData/usersEntity.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
