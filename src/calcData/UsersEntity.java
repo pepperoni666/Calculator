@@ -10,6 +10,11 @@ public class UsersEntity {
     private String email;
     private String password;
 
+    public UsersEntity() {
+        email = "email";
+        password = "password";
+    }
+
     @Id
     @Column(name = "id")
     public double getId() {
@@ -48,6 +53,11 @@ public class UsersEntity {
         return Double.compare(that.id, id) == 0 &&
                 Objects.equals(email, that.email) &&
                 Objects.equals(password, that.password);
+    }
+
+    public UsersEntity(String e, String p){
+        this.email = e;
+        this.password = p;
     }
 
     @Override

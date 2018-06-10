@@ -8,6 +8,6 @@
         <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
         <property name="connection.username">root</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping resource="calcData/usersEntity.hbm.xml" />
+        <mapping class="calcData.UsersEntity" />
     </session-factory>
 </hibernate-configuration>

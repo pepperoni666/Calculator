@@ -31,5 +31,14 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.31" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.2.16-5.2.16" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.46" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/hibernate-annotations-3.0alpha3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
