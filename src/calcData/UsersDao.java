@@ -2,9 +2,6 @@ package calcData;
 
 import org.hibernate.*;
 import org.hibernate.query.Query;
-import org.hibernate.cfg.Configuration;
-
-import javax.persistence.metamodel.EntityType;
 
 public class UsersDao {
 

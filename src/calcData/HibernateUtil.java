@@ -1,6 +1,5 @@
 package calcData;
 
-import com.fasterxml.classmate.AnnotationConfiguration;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
