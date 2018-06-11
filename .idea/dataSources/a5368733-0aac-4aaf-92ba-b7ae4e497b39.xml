@@ -968,19 +968,18 @@
     <table id="243" parent="2" name="users"/>
     <column id="244" parent="242" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="242" name="ip">
+    <column id="245" parent="242" name="email">
       <Position>2</Position>
-      <DataType>varchar(17)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="242" name="email">
+    <column id="246" parent="242" name="ip">
       <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="247" parent="242" name="PRIMARY">
@@ -992,21 +991,16 @@
       <Position>1</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="249" parent="243" name="email">
       <Position>2</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="250" parent="243" name="password">
       <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="251" parent="243" name="PRIMARY">
