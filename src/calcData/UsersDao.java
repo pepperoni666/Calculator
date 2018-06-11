@@ -8,31 +8,6 @@ import javax.persistence.metamodel.EntityType;
 
 public class UsersDao {
 
-    public void addUserDetails(String email, String password) {
-        try {
-            // 1. configuring hibernate
-            Configuration configuration = new Configuration().configure();
-
-            // 2. create sessionfactory
-            SessionFactory sessionFactory = configuration.buildSessionFactory();
-
-            // 3. Get Session object
-            Session session = sessionFactory.openSession();
-
-            // 4. Starting Transaction
-            Transaction transaction = session.beginTransaction();
-            UsersEntity user = new UsersEntity(email, password);
-            session.save(user);
-            transaction.commit();
-            System.out.println("\n\n Details Added \n");
-
-        } catch (HibernateException e) {
-            System.out.println(e.getMessage());
-            System.out.println("error");
-        }
-
-    }
-
     public boolean register(UsersEntity user){
         Session session = HibernateUtil.openSession();
         if(isUserExists(user)) return false;

@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class UserControllerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -18,6 +20,7 @@ public class UserControllerServlet extends HttpServlet {
         String password = request.getParameter("password");
         String conf_password = request.getParameter("conf_password");
         if(password.equals(conf_password) && !password.isEmpty()) {
+
             UsersEntity user = new UsersEntity(email, password);
 
             try {

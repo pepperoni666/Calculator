@@ -5,6 +5,8 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,23 @@ public class LoginService {
     public boolean authenticateUser(String email, String password) {
         UsersEntity user = getUserByEmail(email);
         if(user!=null && user.getEmail().equals(email) && user.getPassword().equals(password)){
+            Session session = HibernateUtil.openSession();
+            Transaction tx = null;
+            try {
+                InetAddress ip = InetAddress.getLocalHost();
+                LogEntity log = new LogEntity(ip.getHostAddress(), user.getEmail());
+                tx = session.getTransaction();
+                tx.begin();
+                session.saveOrUpdate(log);
+                tx.commit();
+            } catch (Exception e) {
+                if (tx != null) {
+                    tx.rollback();
+                }
+                e.printStackTrace();
+            } finally {
+                session.close();
+            }
             return true;
         }else{
             return false;
