@@ -4,9 +4,9 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "log", schema = "calc", catalog = "")
+@Table(name = "log", schema = "calc")
 public class LogEntity {
-    private double id;
+    private long id;
     private String ip;
     private String email;
 
@@ -16,12 +16,13 @@ public class LogEntity {
     }
 
     @Id
-    @Column(name = "id")
-    public double getId() {
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false)
+    public long getId() {
         return id;
     }
 
-    public void setId(double id) {
+    public void setId(long id) {
         this.id = id;
     }
 
