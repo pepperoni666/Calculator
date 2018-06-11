@@ -7,18 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31a69429-c467-4db8-99c7-afadaf086f58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a5368733-0aac-4aaf-92ba-b7ae4e497b39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a5368733-0aac-4aaf-92ba-b7ae4e497b39.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/CalcServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/CalcServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/LogEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/LogEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/UsersEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/calcData/UsersEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_war_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/calcData/CalcServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/calcData/CalcServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/calcData/LogEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/calcData/LogEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/calcData/UsersEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/calcData/UsersEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/calcData/CalcServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calcData/CalcServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CalcServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalcServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calcData/CalcServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="33" column="72" lean-forward="true" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
+            <state relative-caret-position="238">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +52,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+            <state relative-caret-position="285">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -105,12 +104,13 @@
         <option value="$PROJECT_DIR$/web/register.jsp" />
         <option value="$PROJECT_DIR$/src/calcData/UsersDao.java" />
         <option value="$PROJECT_DIR$/src/calcData/UserControllerServlet.java" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/src/calcData/LoginService.java" />
         <option value="$PROJECT_DIR$/src/calcData/UsersEntity.java" />
         <option value="$PROJECT_DIR$/src/calcData/LogEntity.java" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/calcData/CalcServlet.java" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -343,12 +343,12 @@
       <workItem from="1528532450240" duration="5679000" />
       <workItem from="1528558592975" duration="2132000" />
       <workItem from="1528570418970" duration="33122000" />
-      <workItem from="1528709423182" duration="24829000" />
+      <workItem from="1528709423182" duration="27567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101198000" />
+    <option name="totallyTimeSpent" value="103936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -373,10 +373,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49853587" visible="true" weight="0.11737089" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" visible="true" weight="0.11737089" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18228404" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18228404" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -627,9 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/calcData/UserControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -694,18 +691,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+        <state relative-caret-position="285">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/calcData/CalcServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="33" column="72" lean-forward="true" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
+        <state relative-caret-position="238">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>

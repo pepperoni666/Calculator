@@ -19,7 +19,7 @@
 <center>
     <h1>Kalkulator wynagrodzeń (płac) netto-brutto </h1>
     <form method="post" action="CalcServlet">
-        Podaj miesieczne wynagrodzenie
+        Podaj miesieczne wynagrodzenie (brutto)
         <input name = "wynagrod" value="0"/> <br/><br/>
         <input name = "gdzie" type = "checkbox" checked="checked" id="cb"/>
         <label for="cb">Praca w miejscu zamieszkania</label><br/><br/>
