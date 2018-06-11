@@ -1,4 +1,4 @@
-<%--
+<%@ page import="calcData.UsersEntity" %><%--
   Created by IntelliJ IDEA.
   User: peret
   Date: 10/06/2018
@@ -8,9 +8,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Calculator</title>
 </head>
 <body>
-
+<%
+    UsersEntity user = (UsersEntity) session.getAttribute("user");
+%>
+<p>Welcome <%= user.getEmail()%></p>
+<a href="logout.jsp">Logout</a>
+<center>
+    <h1>Kalkulator wynagrodzeń (płac) netto-brutto </h1>
+    <form method="post" action="CalcServlet">
+        Podaj miesieczne wynagrodzenie
+        <input name = "wynagrod" value="0"/>
+        <input type="submit" value="Calculate"/>
+    </form>
+</center>
 </body>
 </html>

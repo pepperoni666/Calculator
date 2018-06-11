@@ -11,6 +11,7 @@
     <title>Login</title>
 </head>
 <body>
+<center>
 <form method="post" action="LoginServlet">
             <h2>Login Page</h2>
             Please provide your credential to use this website
@@ -28,5 +29,6 @@
             <br />
             <input type="submit" value="Login" />
 </form>
+</center>
 </body>
 </html>

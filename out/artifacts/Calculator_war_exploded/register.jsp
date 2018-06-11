@@ -4,6 +4,7 @@
     <title>Registration</title>
 </head>
 <body>
+<center>
 <h1>Registration</h1>
 <form action="RegisterServlet" method="post">
     Email:<input type="text" name="email"/><br><br/>
@@ -13,5 +14,6 @@
     <input type="reset" value="Reset">
 
 </form>
+</center>
 </body>
 </html>

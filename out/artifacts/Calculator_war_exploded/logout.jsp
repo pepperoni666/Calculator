@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-    session.removeAttribute("userId");
+    session.removeAttribute("email");
     session.removeAttribute("password");
     session.invalidate();
 %>
