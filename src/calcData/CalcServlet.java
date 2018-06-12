@@ -46,7 +46,47 @@ public class CalcServlet extends HttpServlet {
             ne = Double.valueOf(0);
         }
 
-        return new HistoryEntity(email, br, ue, ur, uc, uz, zp, ne);
+        if(ne*12 < 85528) {
+            /*ne - 46.33 = br - (br - (br * 0.0976 + br * 0.015 + br * 0.0245)) * 0.09 - ((br - (br * 0.0976 + br * 0.015 + br * 0.0245)) - kosztUzyskania) * 0.18 * 2
+                    +(br - (br * 0.0976 + br * 0.015 + br * 0.0245)) * 0.0775;
+
+            ne - 46.33 = br - br*0.09 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.09 - br*0.36 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.36 + kosztUzyskania*0.36
+                    + br*0.0775 - (br * 0.0976 + br * 0.015 + br * 0.0245)*0.0775;
+
+            ne - 46.33 - kosztUzyskania*0.36 = br - br*0.3725 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.09 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.36
+                    - (br * 0.0976 + br * 0.015 + br * 0.0245)*0.0775;
+
+            ne - 46.33 - kosztUzyskania*0.36 = br - br*0.3725 + br*0.008784 + br*0.00135 + br*0.0022 + br*0,0351 + br*0.0054 + br*0.0088
+                    - br*0.00756 - br*0.0012 - br*0.0019;
+
+            ne - 46.33 - kosztUzyskania*0.36 = br - br*0.322;
+
+            ne - 46.33 - kosztUzyskania*0.36 = br*0.678;*/
+
+            br = (ne - 46.33 - kosztUzyskania*0.36)/0.678;
+        }
+        else{
+            /*ne - 46.33 + 15395.04 + 15395.04 = br - (br - (br * 0.0976 + br * 0.015 + br * 0.0245)) * 0.09 - (ne*12 - 85528) * 0.32 * 2
+                    +(br - (br * 0.0976 + br * 0.015 + br * 0.0245)) * 0.0775;
+
+            ne - 46.33 + 15395.04 + 15395.04 = br - br*0.09 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.09 - (ne*12 - 85528) * 0.64
+                    + br*0.0775 - (br * 0.0976 + br * 0.015 + br * 0.0245)*0.0775;
+
+            ne - 46.33 + 15395.04 + 15395.04 + (ne*12 - 85528) * 0.64 = br - br*0.0125 + (br * 0.0976 + br * 0.015 + br * 0.0245)*0.09
+                    - (br * 0.0976 + br * 0.015 + br * 0.0245)*0.0775;
+
+            ne - 46.33 + 15395.04 + 15395.04 + (ne*12 - 85528) * 0.64 = br - br*0.0125 + br*0.008784 + br*0.00135 + br*0.0022
+                    - br*0.00756 - br*0.0012 - br*0.0019;
+
+            ne - 46.33 + 15395.04 + 15395.04 + (ne*12 - 85528) * 0.64 = br - br*0.0108;
+
+            ne - 46.33 + 15395.04 + 15395.04 + (ne*12 - 85528) * 0.64 = br*0.99;*/
+
+            br = (ne - 46.33 + 15395.04 + 15395.04 + (ne*12 - 85528) * 0.64)/0.99;
+        }
+        HistoryEntity x = calcBrutto(""+br, email, kosztUzyskania);
+        x.setNetto(ne);
+        return x;
     }
 
     protected void doPost(HttpServletRequest request,

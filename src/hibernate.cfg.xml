@@ -7,7 +7,7 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/calc</property>
         <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
         <property name="connection.username">root</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <mapping class="calcData.UsersEntity" />
         <mapping class="calcData.LogEntity" />
         <mapping class="calcData.HistoryEntity" />
