@@ -4,6 +4,7 @@
     <title>Registration</title>
 </head>
 <body>
+<a href="login.jsp">Login Page</a>
 <center>
 <h1>Registration</h1>
 <form action="RegisterServlet" method="post">
