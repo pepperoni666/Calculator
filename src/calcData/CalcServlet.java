@@ -37,6 +37,30 @@ public class CalcServlet extends HttpServlet {
         return new HistoryEntity(email, br, ue, ur, uc, uz, zp, ne);
     }
 
+    private HistoryEntity calcBrutZlec(String val, String email, String stud){
+        double br = 0, ue = 0, ur = 0, uc = 0, uz = 0, zp = 0, ne = 0;
+
+        double kosztUzyskPrzych;
+        try {
+            br = Double.parseDouble(val);
+        } catch (Exception e) {
+            br = Double.valueOf(0);
+        }
+        if(stud == null) {
+            ue = br * 0.0976;
+            ur = br * 0.015;
+            uc = br * 0.0245;
+            kosztUzyskPrzych = (br - (ue + ur + uc)) * 0.02;
+
+        }
+        else{
+            kosztUzyskPrzych = br*0.2;
+            zp = (br-kosztUzyskPrzych)*0.18;
+            ne = br - zp;
+        }
+        return new HistoryEntity(email, br, ue, ur, uc, uz, zp, ne);
+    }
+
     private HistoryEntity calcNetto(String val, String email, double kosztUzyskania){
         double br = 0, ue = 0, ur = 0, uc = 0, uz = 0, zp = 0, ne = 0;
 
@@ -95,18 +119,29 @@ public class CalcServlet extends HttpServlet {
 
         String val = request.getParameter("wynagrod");
         String gdzie = request.getParameter("gdzie");
+        String stud = request.getParameter("stud");
         String[] tto = request.getParameterValues("tto");
+        String[] um = request.getParameterValues("um");
         double kosztUzyskania = 111.25;
         if(gdzie == null)
             kosztUzyskania = 139.06;
 
         UsersEntity user = (UsersEntity) request.getSession().getAttribute("user");
         HistoryEntity his = null;
-        if(tto[0].equals("brutto")) {
-            his = calcBrutto(val, user.getEmail(), kosztUzyskania);
+        if(um[0].equals("praca")) {
+            if (tto[0].equals("brutto")) {
+                his = calcBrutto(val, user.getEmail(), kosztUzyskania);
+            } else {
+                his = calcNetto(val, user.getEmail(), kosztUzyskania);
+            }
         }
         else{
-            his = calcNetto(val, user.getEmail(), kosztUzyskania);
+            if (tto[0].equals("brutto")) {
+                his = calcBrutZlec(val, user.getEmail(), stud);
+            } else {
+                his = new HistoryEntity();
+                //his = calcNetto(val, user.getEmail(), kosztUzyskania);
+            }
         }
         HistoryService service= new HistoryService();
         service.addToHis(his);

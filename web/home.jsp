@@ -25,8 +25,14 @@
         <input type="radio" name="tto" id="ne" value="netto">
         <label for="ne">netto</label>
         <input name = "wynagrod" value="0"/> <br/><br/>
+        <input type="radio" name="um" id="pra" value="praca" checked>
+        <label for="bru">umowa o prace</label>
+        <input type="radio" name="um" id="zle" value="zlecenie">
+        <label for="ne">umowa zlecenie</label><br/><br/>
         <input name = "gdzie" type = "checkbox" checked="checked" id="cb"/>
         <label for="cb">Praca w miejscu zamieszkania</label><br/><br/>
+        <input name = "stud" type = "checkbox" id="st"/>
+        <label for="st">Student</label><br/><br/>
         <input type="submit" value="Calculate"/>
     </form>
 </center>
