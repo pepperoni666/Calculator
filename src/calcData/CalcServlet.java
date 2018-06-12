@@ -96,9 +96,9 @@ public class CalcServlet extends HttpServlet {
         String val = request.getParameter("wynagrod");
         String gdzie = request.getParameter("gdzie");
         String[] tto = request.getParameterValues("tto");
-        double kosztUzyskania = 139.06;
-        if(gdzie.equals("on"))
-            kosztUzyskania = 111.25;
+        double kosztUzyskania = 111.25;
+        if(gdzie == null)
+            kosztUzyskania = 139.06;
 
         UsersEntity user = (UsersEntity) request.getSession().getAttribute("user");
         HistoryEntity his = null;
