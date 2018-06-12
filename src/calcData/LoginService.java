@@ -6,8 +6,6 @@ import org.hibernate.query.Query;
 
 
 import java.net.InetAddress;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LoginService {
     public boolean authenticateUser(String email, String password) {
@@ -55,25 +53,5 @@ public class LoginService {
             session.close();
         }
         return user;
-    }
-
-    public List<UsersEntity> getListOfUsers(){
-        List<UsersEntity> list = new ArrayList<UsersEntity>();
-        Session session = HibernateUtil.openSession();
-        Transaction tx = null;
-        try {
-            tx = session.getTransaction();
-            tx.begin();
-            list = session.createQuery("from UsersEntity").list();
-            tx.commit();
-        } catch (Exception e) {
-            if (tx != null) {
-                tx.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return list;
     }
 }

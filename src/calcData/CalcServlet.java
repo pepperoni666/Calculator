@@ -1,5 +1,7 @@
 package calcData;
 
+import sun.nio.cs.HistoricallyNamedCharset;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -49,6 +51,10 @@ public class CalcServlet extends HttpServlet {
                 ne = Double.valueOf(0);
             }
         }
+        HistoryService service= new HistoryService();
+        UsersEntity user = (UsersEntity) request.getSession().getAttribute("user");
+        HistoryEntity his = new HistoryEntity(user.getEmail(), br, ue, ur, uc, uz, zp, ne);
+        service.addToHis(his);
         try {
             out.println("<html>");
             out.println("<head>");
@@ -66,6 +72,7 @@ public class CalcServlet extends HttpServlet {
             out.println("<b>Netto: " + ne + "</b>");
             out.println("<p><a href=home.jsp>Zmien kryteria obliczen</a></p>");
             out.println("</center>");
+            out.println("<p><a href=history.jsp>View calculations history</a></p>");
             out.println("</body>");
             out.println("</html>");
         } finally {

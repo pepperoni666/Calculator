@@ -51,7 +51,7 @@ public class UsersEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsersEntity that = (UsersEntity) o;
-        return Double.compare(that.id, id) == 0 &&
+        return Long.compare(that.id, id) == 0 &&
                 Objects.equals(email, that.email) &&
                 Objects.equals(password, that.password);
     }

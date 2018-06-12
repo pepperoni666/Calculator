@@ -30,5 +30,6 @@
         <input type="submit" value="Calculate"/>
     </form>
 </center>
+<p><a href="history.jsp">View calculations history</a></p>
 </body>
 </html>

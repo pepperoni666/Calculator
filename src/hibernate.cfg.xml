@@ -10,5 +10,6 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping class="calcData.UsersEntity" />
         <mapping class="calcData.LogEntity" />
+        <mapping class="calcData.HistoryEntity" />
     </session-factory>
 </hibernate-configuration>
